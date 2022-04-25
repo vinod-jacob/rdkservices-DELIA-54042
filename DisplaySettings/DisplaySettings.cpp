@@ -3621,7 +3621,7 @@ namespace WPEFramework {
 
             string sEnable = parameters["enable"].String();
             int enable = parameters["enable"].Boolean();
-
+            LOGERR("Vinod --  enable =  %d!\n", enable);
             bool success = true;
             try
             {
@@ -3637,6 +3637,7 @@ namespace WPEFramework {
                     }
                 }
                 else {
+                    LOGERR("Vinod -> setAudioAtmosOutputMode(%d) !\n", enable);
                     device::Host::getInstance().setAudioAtmosOutputMode (enable);
                 }
             }
